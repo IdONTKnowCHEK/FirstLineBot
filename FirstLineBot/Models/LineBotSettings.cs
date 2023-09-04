@@ -2,8 +2,8 @@
 {
     public class LineBotSettings
     {
-        public string ChannelSecret { get; set; } = null!;
+        public string ChannelSecret { get; set; }
 
-        public string AccessToken { get; set; } = null!;
+        public string AccessToken { get; set; }
     }
 }

@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddDbContext<LineBotApiPracticeContext>(
-        options => options.UseMySql("ConnectionString:DefaultConnection", Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.1.0-mysql")));
+        options => options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"), Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.1.0-mysql")));
 
 builder.Services.Configure<LineBotSettings>(builder.Configuration.GetSection("LineBot"));
 

@@ -9,14 +9,8 @@ namespace FirstLineBot.Controllers
     [Route("api/[controller]")]
     public class LineBotController : ControllerBase
     {
-        private readonly IOptions<LineBotSettings> _lineBotSettings;
-        private readonly string accessToken;
-        private readonly string channelSecret;
-        public LineBotController(IOptions<LineBotSettings> lineBotSettings)
+        public LineBotController()
         {
-            _lineBotSettings = lineBotSettings;
-            accessToken = lineBotSettings.Value.AccessToken;
-            channelSecret = lineBotSettings.Value.ChannelSecret;
         }
 
         [HttpPost("Webhook")]
